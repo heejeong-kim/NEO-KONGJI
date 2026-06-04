@@ -1209,7 +1209,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
     <div id="book-cover">
 
       <!-- 표지 이미지 -->
-      <img id="title-right-img" src="/images/main.png" alt="title visual">
+      <img id="title-right-img" src="images/main.png" alt="title visual">
 
       <!-- 장식 프레임 -->
       <div id="book-border-frame">
@@ -1279,7 +1279,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
     권장 사이즈: 960 × 1080 px
   -->
   <div id="gameover-right">
-    <video id="gameover-img" src="images/ending3.mp4" autoplay loop playsinline muted style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;"></video>
+    <video id="gameover-img" src="images/ending3.mp4" autoplay loop playsinline style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;"></video>
     <div id="gameover-right-ph">
       <div class="go-ph-inner">
         <div class="go-ph-line"></div>
@@ -1938,7 +1938,7 @@ function gameOver(reason){
   document.getElementById('go-report').innerHTML=buildReport();
   document.getElementById('screen-gameover').classList.add('show');
   const goVid=document.getElementById('gameover-img');
-  if(goVid&&goVid.tagName==='VIDEO'){goVid.src='images/ending3.mp4';goVid.currentTime=0;goVid.play();}
+  if(goVid&&goVid.tagName==='VIDEO'){goVid.src='images/ending3.mp4';goVid.currentTime=0;goVid.muted=false;goVid.play();}
 }
 
 /* ════════════════ ENDING ════════════════ */
